@@ -3,7 +3,9 @@
 import pandas as pd
 
 def average_temperature():
-    pass
+    df = pd.read_csv("src\kumpula-weather-2017.csv")
+
+    return df.iloc[182:214].loc[:,"Air temperature (degC)"].mean()
 
 def main():
     result = average_temperature()
